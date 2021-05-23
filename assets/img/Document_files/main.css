@@ -1,0 +1,230 @@
+.header{
+    height: var(--header-height);
+    background-image: linear-gradient(0,#fe6433, #f53e2d);
+}
+
+.header__navbar-list{
+    list-style: none;
+    padding-left: 0; 
+}
+
+.header__navbar-item{
+    display: inline-block;
+}
+
+.header__navbar {
+    display: flex;
+    justify-content:  space-between;
+}
+
+.header__qr{
+    width: 186px;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 120%;
+    padding: 8px;
+    border-radius: 2px;
+    margin-top: 10px; 
+    border-bottom: 30px;
+    display: none;
+    animation: fadeIn ease-in 0.3s;
+}
+
+.header__qr::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 30px;
+    left: 0px;
+    top: -15px;
+}
+
+.header__qr-img{
+    width: 100%;
+}
+
+.header__qr-apps{
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__qr-download{
+    height: 14px;
+    margin: 21px 11px 0 11px;
+}
+
+.header__navbar-item--qr:hover .header__qr{
+    display: block;
+}
+
+.header__navbar{
+    position: relative;
+    height: var(--header__navber-height);
+}
+
+.header__notify{
+    margin-top: 10px;
+    position: absolute;
+    top: 118%;
+    right: 0px;
+    width: 404px;
+    border: 1px solid #d3d3d3;
+    background-color: var(--white-color);
+    animation: fadeIn ease-in 0.3s;
+    display: none;
+    border-radius: 3px;
+    cursor: default;
+    transform-origin: 90% top  ; /* Điều chỉnh vị trí diễn ra hiệu ứng */
+    animation: headernotifyGrowth ease-in .2s;
+    will-change: opcity, transform;
+}
+
+@keyframes headernotifyGrowth {
+     from {
+         opacity: 0;
+         transform: scale(0);
+     }
+     to{
+         opacity: 1;
+         transform: scale(1);
+     }
+}
+
+.header__notify::before{
+    content: "";
+    width: 100%;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: -20px;
+    
+}
+
+.header__notify::after{
+    content: "";
+    border-width: 20px 30px;
+    display: block;
+    border-style: solid;
+    position: absolute;
+    top: -20px;
+    position: absolute;
+    border-color: transparent transparent var(--white-color) transparent;
+    right: 15px;
+    top: -30px;
+}
+ 
+.header__notify-header{
+    height: 40px;
+    background-color: var(--white-color);
+
+}
+h3{
+    color: #999;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+    margin: 0 0 0 12px;
+}
+
+.header__notify-list{ /* Danh sách các item trong bảng */
+    padding-left: 0;
+    list-style: none;
+}
+
+.header__notify-item:hover{
+    background-color: #c4c4c4;
+    cursor: pointer;
+}
+
+.header__notify-img{
+    width: 48px;
+    flex: 1;
+}
+
+.header__notify-item{ /* Bảng cha chứa các mục trong bảng thông báo */
+    background-color: rgba(238, 75,43,0.08)
+}
+
+.header__notify-info{
+    flex: 1;
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+
+.header__notify-link{ /* Các thành phần trong bảng thông báo */
+    display: flex;
+    padding: 12px ;
+    text-decoration: none;
+}
+
+.header__notify-name {
+    justify-self: unset;
+    margin: 0;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    font-weight: 600;
+    line-height: 1.2rem;
+    display: flex;
+    align-content: center;
+    
+}
+
+.header__notify-descriotion {
+    color: #756f6e;
+    display: block;
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.2rem;
+
+    align-content: center;
+}
+
+.header__navbar-item-notify:hover .header__notify{
+    display: block;
+}
+
+.header__notify-end{
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.header__notify-end-item{
+    height: 30px;
+    line-height: 30px;
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+.header__notify-end-item:hover{
+    color: #999;
+    cursor: pointer;
+}
+/* Button style  */
+.btn{
+    min-width: 142px;
+    height: 36px;
+    font-size: 1.5rem;
+}
+
+.btn-sizes{
+    height: 32px;
+    font-size: 1.2rem;
+    width: 950px;
+    
+}
+
+.header-with-search{
+    height: var(--header-with-search);
+}

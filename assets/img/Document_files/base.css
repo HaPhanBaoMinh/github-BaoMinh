@@ -1,0 +1,461 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: rgb(238, 75, 43);
+    --header__navber-height:27px;
+    --header-height: 120px;
+    --header-with-search: calc(var(--header-height) - var( --header__navber-height));
+
+}
+
+* {
+    box-sizing: inherit; /* Kế thừa */
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    line-height: 1.6rem;/* Độ cao của dòng chữ - line-height */
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%; /* Với những màn hình nhỏ hơn 1200px, thì nó sẽ giảm kích thước để phù hợp với màn hình đó */
+    margin: 0 auto;
+}
+
+.grid__full-width{
+    width: 100%; /* Không muốn dùng width = 1200px thì dùng class này */
+}
+
+.grid__row{ /* Để chuyển các thuộc tính trở nên nằm ngang*/
+    display: flex;
+    flex-wrap: wrap; /* Các thuộc tính tự xuống dòng */
+}
+
+
+
+.header__navbar-item, .header__navbar-item-list{
+    font-size: 1.5rem;
+    display: inline-block;
+    color: var(--white-color);
+    text-decoration: none; /* Bỏ gạch chân */
+    font-weight: 300;
+    margin-top: 4px;
+}
+
+.header__navbar-item{
+    margin: 0 8px;
+    position: relative;
+   
+}
+
+.login {
+    font-weight: 600;
+}
+
+.header__navbar-item--separate::after{
+ content: "";
+ display: block;
+ position: absolute;
+ width: 1px;
+ height: 14px;
+ background-color: #fb9086;   
+ top: 2px;
+ right: -9px; 
+}
+
+.header__navbar-list{
+    margin-top: 7px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__navbar-item:hover, .header__navbar-item-list:hover, .header__navbar-item-left:hover{
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.header__navbar-icon-link{
+    margin: 0px 8px;
+    color: #fff; 
+    margin: auto 4px;
+    display: inline-flex;
+    align-content: center;
+    cursor: pointer;
+}
+
+.header__navbar-icon-link{
+    flex: content;
+    font-size: 15px;
+}
+.header__navbar-item-left{
+    margin: auto 4px;
+    display: flex;
+    align-content: center;
+}
+
+.header__navbar-item-no-poiter{
+    cursor: text;
+    color: var(--white-color);
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from{
+        transform: scale(var(--growth-from));
+        opacity: 0.5;
+    }
+    to{
+        transform: scale(var(--growth-to));
+        opacity: 1;
+    }
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    /* display: none; */
+    animation: fadeIn linear .3s;
+}
+    
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1; /* Thuộc tính nào có z-index cao hơn thì nằm trên */
+}
+.modal__body{
+    --growth-from:0.7;
+    --growth-to:1;
+    background-color: var(--white-color );
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    border-radius: 5px;
+    animation: growth linear .2s ;
+}
+.modal__inner{
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px;
+    width: 500px;
+}
+
+.auth-form__header{ /* Phần Header*/
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 120x 12px;
+      
+} 
+
+.auth-form__heading-noclick { /* text Đăng ký */
+    color: var(--text-color);
+    font-size: 2.2rem;
+    font-weight: 400;
+    padding: 25px 0;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.auth-form__heading-click{ /* button đăng nhập */
+    font-size: 1.7rem;
+    margin: auto 0 auto 0;
+    color: var(--primary-color);
+    border-style: none;
+    cursor:  pointer;
+    background-color: #fff;
+    font-weight: 500;
+}
+
+.auth-form__form{ /* Phần form điền thông tin */
+    margin-top: 8px;
+   
+}
+
+.auth-form__group{ /* Chứa các ô đièn thông tin */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.auth-form__input { /* các ô điền thông tin */
+    margin-top: 16px;
+    height: 37px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    outline: none;
+}
+
+.auth-form__input:focus{
+    border-color: #888;
+}
+
+.auth-form__note{ /* Note */
+    margin-top: 24px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center; /* Điều chỉnh phần văn bản */
+    padding: 0 12px;
+}
+
+
+.auth-form__note-link{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.btn{
+
+}
+.auth-form__btn{ /* button trở lại và đăng ký */
+    margin-top: 60px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn.auth-form__btn-login{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border-style: none;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-left: 5px;
+}
+
+.btn.auth-form__btn-login:hover{
+    background-color:   rgb(238, 75, 43,0.7);
+}
+
+
+
+.btn.auth-form__btn-back{
+    border-style: none;
+    background-color: var(--white-color);
+    cursor: pointer;
+    
+}
+
+.btn.auth-form__btn-back:hover{
+    background-color: rgba(0,0,0,0.09);
+}
+
+
+
+.auth-form__socials{ /* kết nối với mạng xã hội */
+   display: flex;
+   justify-content: center;
+   justify-content: space-between;
+   align-items: center  ;
+}
+.btn--with-icon{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #dbdbdb;
+    align-items: center;
+    border-radius: 3px;
+    margin-bottom: 25px;
+}
+
+.auth-form-icon{
+    font-size: 1.8rem;
+     color: var(--white-color);
+     font-weight: 800;
+}
+
+
+
+.auth-form-icon-fb{
+    background-color: #3a5a98;
+    color: #fff;
+    display: flex;
+    margin-right: 5px;
+    
+}
+
+.auth-form-icon-gg{
+    color: black;
+    background-color: rgba(190, 184, 184, 0.4);
+    margin-left: 5px;
+}
+
+.auth-form-icon-gg-color {
+    color: #333;
+}
+
+.auth-form__socials-text{
+    margin: 0 20px;
+    
+}
+
+.auth-form__aside{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.auth-form__help-link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.auth-form--separate{
+    border: 1px solid rgb(187 183 183);
+    font-size: 15px;
+    margin: 0 16px;
+}
+
+.auth-form__help-link-forget{ /* Quên mật khẩu */
+    color: var(--primary-color);
+}
+
+.auth-form__help-link-help{ /* cần trợ giúp*/
+    color: #a8a6a6;
+}
+
+.header-with-search{
+    height: var(--header-with-search);
+    display: flex;
+    align-items: center;
+    margin: 0 6px;
+}
+
+.header__logo{
+    display: flex;
+    align-content: center;
+  
+}
+
+.header__logo-img{
+    width: 150px;
+}
+.header__search{
+    display: flex;
+    flex: 1;
+    height: 40px;
+    background-color: var(--white-color);
+    margin-left: 12px;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 45px;
+}
+
+.header__search-input{
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    padding: 12px;
+    font-size: 1.4rem;
+    flex: 1;
+    
+}
+
+.header__search-click{
+    height: 32px;
+    width: 58px;
+    margin: 2px 3px;
+    padding: 0;
+    border: 0;
+    border-radius: 2px;
+    background-color: var(--primary-color);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.header__search-click:hover{
+    background-color: rgba(238, 75, 43,0.8);
+}
+
+.header__search-click-icon{
+    color:var(--white-color);
+    font-size: 14px;
+    position: absolute;
+    
+}
+
+.header__cart{
+    color: #fff;
+    font-size: 25px;
+    margin-left: 50px;
+    display: flex;
+    text-align: center;
+    width: 150px;
+    margin-top: 1px;
+}
+
+.header__cart-icon{   
+    align-items: flex-end;
+    text-align: center;
+    
+}
+.header__cart-icon:hover{
+    cursor: pointer;
+}
+
+
+.header__search-inshop{
+    font-size: 1.4rem;  
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.header__search-inshop-icon{
+    font-size: 10px;
+    margin: 6px 5px;
+}
+
+.header__search-inshop-separate{
+    border-left: 1px solid rgb(187 183 183);
+    height: 17px;
+    padding:0 7px;
+}
+
+.header__search-option{
+    list-style: none;
+    position: relative;
+}
+
+.header__search-option-item{  
+   color: var(--white-color);
+   background-color: black;
+}
+
+.header__search-item-icon{
+    color: var(--primary-color);
+  
+}
+
+.header__search-item{
+    right: 0;
+    width: 100%;
+    position: absolute;
+    display: inline-block;
+}
