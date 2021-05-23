@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- Định nghĩa loại tài liệu này HTML -->
+<!-- Thẻ (Tag) -->
+<html> <!-- Thẻ mở -->
+<!-- 1 file html chỉ có 1 thẻ html -->
+    <head> <!-- Phần đầu -->
+        <title> Bao_Minh - Shop </title> <!-- Tiêu đề -->
+        <meta charset="utf-8">
+        <style>
+            h1{
+                margin-top: 100px ;
+            }
+            .box{
+                width: 100%;
+                height: 100px;
+                background-color: goldenrod;
+            }
+            .box::before{
+                content: "";
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-color: violet;
+            }
+            .box::after{
+                content: "";
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+            h1::first-letter{
+                font-size: 50px;
+                color: red;
+            }
+            .selection::first-line {
+                color: brown;
+                font-size: 30px;
+            }
+
+            h1::selection{
+                color: rgb(236, 171, 29);
+                background-color: blueviolet;
+
+            }
+        </style>
+    </head>
+
+    <body> <!-- Phần thân -->
+            <div class="box"> </div>
+            <h1> Pseudo elements</h1>
+            <ul>
+                <li>::before</li> <!-- Luôn tạo ra phần tử đầu tiên -->
+                <li>::after</li> <!-- Luôn tạo ra phần tử cuối cùng -->
+                <li>::first-letter</li> <!-- Lấy ra chữ cái đầu tiên -->
+                <li>::first-line</li> <!-- Lấy ra dòng đầu tiên -->
+                <li>::selection</li> <!-- Các thuôc thuộc tính CSS chỉ có tác dụng khi bôi đen -->
+            </ul>
+            <div class="selection">
+                <p> Đây là dòng 1 </p>
+                <p> Đây là dòng 2 </p>
+            </div>
+
+    </body>
+</html>  <!-- Thẻ đóng-->

@@ -1,0 +1,229 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    background-color: #ccc;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.title {
+    width: 100%;
+    height: 42px;
+    background-color: orangered;
+    display: inline-block;
+    color: white;
+    display: flex;
+    justify-content:  space-between;
+    font-weight: 400;
+}
+button{
+    font-size: 15px;
+    font-weight: 400;
+    background-color: orangered;
+    border-bottom-right-radius: 10px;
+    border-color: orangered ;
+}
+.title-list1{
+    margin-top: 0px;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 20px;
+}
+.title-list2 {
+    margin: 0px;
+    padding: 0px;
+    justify-content: right;
+    margin-right: 20px;
+    
+}
+
+.title-item{
+    padding: auto 16px;
+    display: inline-block;
+    margin: 12px 8px;
+    
+}
+.background1{
+    width: 100%;
+    height: 212px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.chid-background{
+   
+    height: 143px;
+    width: 722px;
+    background-color: white;
+    margin: 36px;
+    
+    align-self: center;
+    
+}
+.input{
+    margin: 0px;
+    padding: 0px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+
+}
+.text1 {
+    display: inline-block;
+    margin: 0;
+  
+
+}
+.text2{
+    display: inline-block;
+    margin: 0px;
+   
+
+}
+.name, .password {
+    display: flex;
+}
+.text1, .text2 {
+    display: flex;
+    padding-left: 10px;
+    display: inline;
+    min-width: 90px;
+}
+
+.form_label{
+    flex: 1;
+    min-width: 90px;
+}
+
+.culumn-layout {
+ background-color: white;
+ font-size: 14px;
+ display: flex;
+ padding: 12px 0;
+ 
+ 
+}
+.sidebar-one {
+    margin-left: 20px;
+    flex: 1;
+    margin: 10px;
+}
+
+.sidebar-two {
+    flex: 1;
+    margin: 10px;
+}
+
+.main-column {
+    flex: 3;
+    margin: 10px;
+}
+
+.background2{
+    display: flex;
+    margin-top: 50px;
+    flex: 1;
+    justify-content: space-around;
+    min-width: 30px;
+    
+}
+.feature-item{
+    justify-content: space-around;
+    padding: 12px 10px;
+    flex: 1;
+    flex-basis: 30%;
+    display: flex;
+}
+
+
+.f1 {
+    background-color: rgb(192, 227, 222);
+    padding: 12px 16px;
+    flex: 1;
+
+}
+
+.f2 {
+    background-color: rgb(227, 200, 192);
+    padding: 12px 16px;
+    flex: 1;
+}
+
+.f3 {
+    background-color: rgb(226, 192, 227);
+    padding: 12px 16px;
+    flex: 1;
+}
+.wrap-layout {
+    display: flex;
+    justify-content: space-around;
+    padding: 31px 0px;
+    background-color: #fff;
+    margin: 26px 0 ;
+    flex-wrap: wrap;
+    align-content: center;
+
+}
+
+.wrap-layout-item {
+    background-color: orangered;
+    width: 148px;
+    height: 90px;
+    font-size: 48px;
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 90px;
+    font-weight: 700; /* Set độ dày của chữ */
+}
+
+.Center-item {
+    display: flex;
+    background-color:  rgb(192, 227, 194);
+    font-size: 42px;
+    font-weight: 700;
+    margin: 36px auto 0 auto;
+    height: 360px;
+    max-width: 640px;
+}
+.item{
+    margin: auto;
+}
+
+.end-item{
+    display: flex;
+    margin: 50px;
+    margin: 12px auto 48px auto;
+    max-width: 740px;
+    flex-direction: row;
+    
+}
+.item1{
+    background-color: white;
+    flex: 1;
+    padding: 10px;
+}
+.item2{
+     background-color: rgb(227, 192, 214);
+    flex: 1;
+     
+     padding: 10px;
+     
+}
+.item3{
+    background-color: rgb(192, 210, 227);
+    flex: 1;
+    
+    padding: 10px;   
+}
+.culumn-item{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}

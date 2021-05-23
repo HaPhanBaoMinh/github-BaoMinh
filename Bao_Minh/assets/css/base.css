@@ -21,16 +21,7 @@ html {
     font-family: 'Source Sans Pro', sans-serif;
     box-sizing: border-box;
 }
-/* Responsive */
-.grid {
-    width: 1200px;
-    max-width: 100%; /* Với những màn hình nhỏ hơn 1200px, thì nó sẽ giảm kích thước để phù hợp với màn hình đó */
-    margin: 0 auto;
-}
 
-.grid__full-width{
-    width: 100%; /* Không muốn dùng width = 1200px thì dùng class này */
-}
 
 .grid__row{ /* Để chuyển các thuộc tính trở nên nằm ngang*/
     display: flex;
@@ -163,6 +154,21 @@ html {
     }
 }
 
+@keyframes regrowth {
+    from{
+        transform: scale(var(--growth-to));
+        opacity: 1;
+    }
+    to{
+        transform: scale(var(--growth-from));
+        opacity: 0.5;
+    }
+}
+
+#login-item{
+    display: none;
+}
+
 /* Modal */
 .modal {
     position: fixed;
@@ -171,7 +177,7 @@ html {
     left: 0;
     right: 0;
     display: flex;
-    /* display: none; */
+    display: none;
     animation: fadeIn linear .3s;
 }
     
@@ -190,13 +196,22 @@ html {
     position: relative;
     z-index: 2;
     border-radius: 5px;
-    animation: growth linear .2s ;
+    
 }
 .modal__inner{
     display: flex;
     flex-direction: column;
     padding: 0 32px;
-    width: 500px;
+    max-width: 500px;
+    margin: 116px auto;
+
+}
+
+.header{
+    position: fixed;
+    top:0 ;
+    width: 100%;
+    z-index: 60;
 }
 
 .auth-form__header{ /* Phần Header*/
@@ -267,7 +282,8 @@ html {
 }
 
 .btn{
-
+    padding: 0px 44px;
+    align-items: center;
 }
 .auth-form__btn{ /* button trở lại và đăng ký */
     margin-top: 60px;
@@ -526,6 +542,7 @@ html {
     border-radius: 3px;
     display: inline-block;
     top: 37px;  
+    z-index: 1;
 }
 .header__search-text{
     border-top: 10px;
@@ -645,9 +662,9 @@ html {
     content: "";
     display: block;
     position: absolute;
-    top: -4%;
-    width: 100%;
-    height: 20px;
+    top: -7%;
+    width: 115%;
+    height: 60px;
     background-color: transparent;
     
 }
@@ -727,7 +744,7 @@ button.header__cart-item-primary:hover{
 
 
 .header__cart-img{
-    height: 40px;
+    height: 48px;
     margin: 10px 0;
     border-radius: 2px;
     width: 15%;
@@ -735,7 +752,7 @@ button.header__cart-item-primary:hover{
 
 .header__cart-item{
     display: flex;
-    margin: 20px 0;
+    padding: 15px 0;
     padding-left: 12px;
 }
 
@@ -881,6 +898,9 @@ button.header__cart-item-primary:hover{
     border-color: transparent transparent var(--white-color) transparent;
 }
 
+.header__sort-bar-login{
+    display: none;
+}
 
 .header__navbar-user:hover .header__navbar-user-chose{
     display: block;
@@ -890,6 +910,8 @@ button.header__cart-item-primary:hover{
 
 .container{
     background-color: #f5f5f5;
+    margin-top: var(--header-height);
+    overflow: hidden;
 }
 
 .grid__column-2{
@@ -959,7 +981,7 @@ button.header__cart-item-primary:hover{
 
 .home-filter{
     background-color: rgb(240, 235, 235);
-    margin: auto 4px auto 0px;
+    margin: auto 0px auto 0px;
     border-radius: 2px;
     display: flex;
     margin-top: 12px;
@@ -1279,3 +1301,147 @@ button.header__cart-item-primary:hover{
     font-weight: 600;
     color: white;
 }
+
+.header__search-sort{
+    position: fixed;
+    background-color: #000;
+    width: 100%;
+    height: 46px;
+    left: 0;
+    top: 70px;
+    z-index: 3;
+    display: none;
+    transform: translateY(-45px);
+    box-shadow: 0px 2px 4px silver;
+    background-color: #fff;
+    display: none;
+}
+
+#search-sort-click{
+    display: none;
+    
+}
+
+
+#search-sort-click:checked ~ .header__search-sort{
+    display: block;
+    transform: translateY(0);
+    animation: slide ease .2s;
+}
+
+
+
+.header__search-sort-click{
+    display: none;
+}
+
+.header__sort-bar-icon{
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    left: 15px;
+}
+
+.header__sort-bar-icon{
+    display: none;
+}
+
+@keyframes slide {
+    from{
+        transform: translateY(-45px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.header__navbar-user-img-sort-bar{
+    position: absolute;
+    height: 30px;
+    right: 90px;
+}
+
+.header__sort-bar-login{
+    
+}
+
+
+
+
+.header__search-sort{
+    display: none;
+}
+
+input:checked + label {
+    display: block;
+  }
+
+  .header__search-sort-list{
+    line-height: 46px;
+    text-align: center;
+  }
+
+  .header__search-sort-close{
+    font-size: 15px;
+    line-height: 46px;
+  }
+  .header__search-sort-text{
+    width: 70%;
+    height: 30px;
+    border: 1px solid silver;
+    outline: none;
+    border-radius: 30px;
+    font-size: 15px;
+    padding-left: 9px;
+    color: #707070;
+    margin: 0 15px;
+  }
+  .header__search-sort-search{
+    font-size: 10px;
+  }
+
+  .header__search-inputbox{
+     
+  }
+
+  .header__search-sort-find{
+      line-height: 49px;
+  }
+
+
+  .mobile-category{
+    overflow-x: auto; /* Tạo thanh trượt ngang khi thuộc tính con vượt ngoài thuộc tính cha */
+    margin: 4px 0;
+  }
+  .mobile-category__list{
+      display: flex;
+      padding: 0;
+  } 
+  .mobile-category__item{   
+    list-style: none;
+    display: block;
+    margin: 0 5px;
+    font-size: 1.3rem;
+    background-color: rgb(45, 139, 182);
+    background-color: var(--primary-color);
+    height: 40px;
+    flex-shrink: 0;   /* Thanh trượt ngang */
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden; /* Ẩn đi những thuộc tính bị lòi ra ngoài so với thuộc tính cha */
+}
+.mobile-category__link{
+    text-decoration: none;
+    color: #fff;
+    line-height: 40px;
+    font-weight: 500;
+  }
+  
+  .mobile-category{
+      display: none;
+  }

@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!-- Định nghĩa loại tài liệu này HTML -->
+<!-- Thẻ (Tag) -->
+<html> <!-- Thẻ mở -->
+<!-- 1 file html chỉ có 1 thẻ html -->
+    <head> <!-- Phần đầu -->
+        <title> Bao_Minh - Shop </title> <!-- Tiêu đề -->
+        <meta charset="utf-8">
+        <style>
+            html{
+                background-color: silver;
+            }
+            
+            .mother-box{
+                width: 100%;
+                height: 100px;
+                background-color: black;
+                position: relative;
+            }
+            .child-box{
+                width: 20px;
+                height: 20px;
+                background-color: white;
+                position: absolute;
+                top: calc(50% - 10px);
+                left: 50%;
+            }
+        </style>
+    </head>
+
+    <body> <!-- Phần thân -->
+           <h1>CSS Position: Relative</h1>
+           <ul>
+               <li>Relative</li> <!-- Vị trí tương đối - lấy chính mình làm gốc tọa độ - Không phụ thuộc vào các thuộc tính khác -->
+               <li style=" color:red; font-size:20px ">Absolute</li> <!-- Vị trí tuyệt đối 
+                                                                                - Phụ thuộc vào thẻ cha gần nhất có thuộc tính position -->
+               <li>Fixed</li>
+               <li>Sticky</li>
+           </ul>
+           <div class="mother-box">
+               <div class="child-box"></div>
+           </div>
+    </body>
+</html>  <!-- Thẻ đóng-->

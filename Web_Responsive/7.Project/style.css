@@ -1,0 +1,21 @@
+.item{
+    background-color: orange;
+    color: #fff;
+    font-size: 40px;
+    align-items: center;
+    height: 200px;
+}
+
+.col >div{
+    margin: auto;
+    line-height: 200px;
+    text-align: center;
+}
+
+.something{
+    background-color: blue;
+}
+
+.col{
+    margin-top: 10px;
+}

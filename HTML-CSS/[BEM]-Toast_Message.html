@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- Định nghĩa loại tài liệu này HTML -->
+<!-- Thẻ (Tag) -->
+<html> <!-- Thẻ mở -->
+<!-- 1 file html chỉ có 1 thẻ html -->
+    <head> <!-- Phần đầu -->
+        <title> Bao_Minh - Shop </title> <!-- Tiêu đề -->
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="[BEM]-Toast_Message.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    </head>
+
+    <body> <!-- Phần thân -->
+        <!-- Success -->
+    <div id="toast"> 
+        <div class="toast--success toast" >
+            <div class="toast--success toast__icon"> 
+                <i class="toast--success fas fa-check-circle"></i>
+            </div>
+            <div class="toast--success toast__body">
+                <h3 class="toast--success toast__title">Success</h3>
+                <p class="toast--success toast__msg"> Anyone with access can view your invited visitors </p>               
+            </div>
+            <button class="toast--success toast__close "> 
+                <i class="toast--success fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+<!-- Phần nút -->
+    <div class="list">
+        <button class="btn btn--sucess btn--disabled"> SHOW SUCCESS </button>
+        <button class="btn btn--danger"> SHOW ERROR </button>
+    </div>
+       
+<!-- Phần script -->
+        <script>
+            function toast() {
+                
+            }
+        </script>
+    </body>
+</html>  <!-- Thẻ đóng-->

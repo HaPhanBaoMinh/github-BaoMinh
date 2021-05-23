@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+.main {
+    width: 1200px;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    background-color: #333;
+    position: relative;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 48px;
+}
+
+/* Article */
+h1 {
+    line-height: 2rem;
+}
+
+article {
+    padding: 0 16px;
+    line-height: 1.6rem;
+}
+
+article img {
+    width: 640px;
+    max-width: 100%;
+    display: block;
+    margin: 32px auto;
+}
+
+/*MOBILE NAV*/
+
+
+.nav__bars-btn{
+    width: 28px;
+    height: 28px;
+    color: #fff;
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 6px;
+    z-index: 2;
+}
+
+.nav__overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.nav__mobile{
+    z-index: 1;
+    /* display: none; */
+}
+.nav__mobile-list{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 0px;
+    list-style: none;
+    top: 47px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    background-color: #fff;
+    height: 100vh;
+    transform: translateX(100%);
+    
+}
+.nav__mobile-link{
+    text-decoration: none;
+    font-size: 20px;
+    /* line-height: 80px; */
+    display: block;
+    padding: 30px 20px 30px 20px;
+}
+
+#box__check:checked ~ .nav__mobile-list{
+    transform: translateX(0);
+    animation: nav__slide  ease 0.3s ;
+}
+
+#box__check ~ .nav__mobile-list{
+    animation: nav__slide_re  ease 0.3s ;
+}
+
+#box__check:checked ~ .nav__overlay{
+    display: block;
+}
+
+@keyframes nav__slide {
+    from{ transform: translateX(100%);}
+    to{transform: translateX(0);}
+}
+
+@keyframes nav__slide_re {
+    from{transform: translateX(0);}
+    to{ transform: translateX(100%);}
+}
+
+#box__check{
+    display: none;
+}
+
+.nav_colse-icon{
+    width: 20px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+
+@media screen and (max-width: 1023px) {
+    .nav__bars-btn{
+        display: block;
+    }
+
+    .nav__pc{
+        display: none;
+    }
+}

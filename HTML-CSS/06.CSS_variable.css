@@ -1,0 +1,7 @@
+:root{
+    --mausac: violet;  /* Đạt tên biến '--' trước tên của biến */
+}
+
+h1{
+    color: var(--mausac); 
+}
