@@ -1,0 +1,39 @@
+* {
+    background-color: black;
+}
+
+html {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header{
+    font-size: 50px;
+    color: white;
+}
+
+.link_down{
+    color: aquamarine;
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.child_title{
+    color: white;
+    font-weight: 300;
+    font-size: 42px;
+}
+
+.note{
+    font-size: 21px;
+    color: gray;
+}
+
+.phone_icon{
+    margin-top: 20px;
+}
+
+.license{
+    text-align: right;
+    color: gray;
+}
