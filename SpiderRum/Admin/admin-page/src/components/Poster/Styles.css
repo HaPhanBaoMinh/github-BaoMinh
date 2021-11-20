@@ -1,0 +1,16 @@
+.PosterLayout {
+  width: 60%;
+}
+
+.PosterList {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 41%;
+  flex-direction: column;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.icon {
+}

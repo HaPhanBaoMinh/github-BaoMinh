@@ -1,0 +1,47 @@
+.OrderItem {
+  width: 98%;
+  min-height: 70px;
+  background-color: white;
+  /* display: inline-block; */
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+  /* padding: 0px 30px; */
+  margin: 4px 2px;
+  background-color: rgb(146 220 255 / 60%);
+  border-radius: 10px;
+}
+
+.OrderItem:hover {
+  cursor: pointer;
+  background-color: rgb(146 220 255 / 100%);
+  transition: 0.3s ease;
+}
+
+.react-calendar {
+  /* width: 500px; */
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.849);
+  /* border: 1px solid #a0a096; */
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+  border-radius: 10px;
+  height: 320px;
+}
+
+.OrderItemTotal {
+  display: inline-block;
+  margin: auto 0;
+  padding-right: 10px;
+}
+
+.OrderItemInfo {
+  padding-left: 10px;
+  line-height: 20px;
+}
+
+.OrderItemInfo h6 {
+  font-size: 13px;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,129 @@
+.Sidebar {
+  height: 100vh;
+  background-color: white;
+  width: 14%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  /* border-top-right-radius: 20px; */
+  /* border-bottom-right-radius: 10px; */
+  box-shadow: -12px 8px 17px 4px;
+}
+
+.Sidebar_logo {
+  padding: 20px;
+}
+
+.Sidebar_logo img {
+  height: auto;
+  max-width: 100%;
+}
+
+.Sidebar_content {
+  width: 100%;
+  /* background-color: bisque; */
+  height: 100%;
+}
+
+.Sidebar_content-list {
+}
+
+.Sidebar_item {
+  font-size: 16px;
+  /* background-color: blueviolet; */
+  display: flex;
+  padding: 15px 0;
+  text-transform: uppercase;
+  gap: 5px;
+  justify-content: left;
+  margin-top: 20px;
+  font-weight: 500;
+  padding-left: 35px;
+  border-radius: 5px;
+  align-items: end;
+}
+
+.Sidebar_item h3 {
+  padding: 1px 0;
+}
+
+.Siderbar_icon {
+  font-size: 20px;
+  padding-right: 15px;
+}
+
+.Sidebar_item:hover {
+  background-color: #2e98d4;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s ease;
+  width: 80%;
+}
+
+.hightLigh:hover {
+  background-color: rgb(223, 51, 51);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 80%;
+}
+.link {
+  color: black;
+  text-decoration: none;
+}
+
+.OpenSideBar {
+  /* height: 30px; */
+  /* background-color: #2e98d4; */
+  /* margin-left: 55px; */
+  /* width: 100%; */
+}
+
+.OpenSideBar_item {
+  height: 35px;
+  /* padding-left: 55px; */
+  /* background-color: aquamarine; */
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  margin-top: 5px;
+  align-items: center;
+  padding-left: 55px;
+  width: 60%;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #03a9f4;
+}
+
+.OpenSideBar_item:hover {
+  color: white;
+  background-color: #2e98d4;
+  cursor: pointer;
+}
+
+/* .link:hover {
+  background-color: #2e98d4;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 0.5s ease;
+} */
+
+.link {
+  color: #03a9f4;
+}
+
+.link .Siderbar_icon {
+  color: black;
+}
+
+.hover {
+  height: 70px;
+  overflow: hidden;
+}
+
+.hover:hover {
+  /* background-color: black; */
+  height: 160px;
+  transition: 0.2s ease-in;
+}

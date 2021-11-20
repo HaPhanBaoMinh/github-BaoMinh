@@ -1,0 +1,55 @@
+.PosterItem {
+  width: 500px;
+  min-height: 226px;
+  /* background-color: aqua; */
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid;
+  overflow: hidden;
+  position: relative;
+}
+
+.PosterItem::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(218, 218, 218, 0.562);
+  display: none;
+}
+
+.PosterItem:hover:before {
+  display: block;
+}
+
+.PosterItem:hover {
+  box-shadow: 1px 2px 6px 2px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.PosterItem:hover button {
+  display: block;
+}
+
+.PosterItem button {
+  font-size: 50px;
+  z-index: 2;
+  display: inline;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  background-color: rgba(255, 255, 255, 0);
+  outline: none;
+  border: none;
+  display: none;
+  transition: 0.2s ease;
+  color: rgb(104, 104, 104);
+}
+
+.PosterItem button:hover {
+  cursor: pointer;
+  color: black;
+}

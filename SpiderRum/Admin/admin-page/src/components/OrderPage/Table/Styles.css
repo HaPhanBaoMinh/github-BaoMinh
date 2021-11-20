@@ -1,0 +1,71 @@
+.table-list {
+  border: 1px solid;
+  width: 99.5%;
+  background-color: rgb(255, 255, 255);
+  margin: 0px auto;
+  border: none;
+  border-top: 1px solid;
+  text-align: center;
+}
+thead {
+  height: 40px;
+  background-color: blueviolet;
+}
+
+.header {
+  margin: auto;
+  color: white;
+  border: 1px solid rgb(0, 0, 0);
+  line-height: 40px;
+}
+
+.tr {
+  border-bottom: 1px solid blue;
+  height: 40px;
+}
+
+.td {
+  line-height: 50px;
+}
+
+.address {
+  max-width: 100px;
+  font-size: 15px;
+  overflow: hidden;
+  width: 100px;
+}
+
+.button {
+  margin: 0 5px;
+  outline: none;
+  border: none;
+  height: 30px;
+  width: 90px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+}
+.check {
+  width: 250px;
+}
+
+.confirm {
+  background-color: #61d372;
+}
+
+.cancel {
+  background-color: #fe4848;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.confirm:hover {
+  background-color: #12b92b;
+}
+
+.cancel:hover {
+  background-color: #cf0000;
+}

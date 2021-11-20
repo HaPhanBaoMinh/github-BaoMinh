@@ -1,0 +1,49 @@
+.DemoPoster {
+  width: 50vw;
+  height: 50vh;
+  /* background-color: aqua; */
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.DemoPoster img {
+  border: 1px solid;
+}
+
+.icon {
+  margin: 0 20px;
+  font-size: 50px;
+  color: rgb(110, 110, 110);
+}
+
+.icon:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.imgbox {
+  height: 100%;
+  width: 670px;
+  display: flex;
+  overflow: hidden;
+  border: none;
+}
+
+.imgbox img {
+  margin-right: 5px;
+  animation: posterScale 2s ease-in-out;
+}
+
+@keyframes posterScale {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
